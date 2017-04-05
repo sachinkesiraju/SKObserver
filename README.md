@@ -3,10 +3,10 @@ Every iOS dev makes a KVO wrapper at some point, here's mine. <br>
 SKObserver is an NSObject category that provides a cleaner block based syntax for observing key value changes.
 
 <h2> Setup </h2>
-Simply drag and drop the NSObject+SKObserver files into your project and `#import "NSObject+SKObserver.h"` and you're 💯.
+Simply drag and drop the NSObject+SKObserver files into your project and ```#import "NSObject+SKObserver.h"``` and you're 💯.
 
 <h2> Implementation </h2>
-To start observing changes to an object, call the method 'sk_addObserverForKeyPath:withBlock:' on your object as follows. The block will return a dictionary containing the changes on the object.
+To start observing changes to an object, call the method ```sk_addObserverForKeyPath:withBlock:``` on your object as follows. The block will return a dictionary containing the changes on the object.
 ```
 [object sk_addObserverForKeyPath:@"keyPath" withBlock:^(NSDictionary <NSKeyValueChangeKey, id>  *change)
 {
